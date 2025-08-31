@@ -1,11 +1,34 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Education from '../components/Education.astro';
+import About from '../components/About.astro';
+import Hispania from '../components/Hispania.astro';
+import Institution from '../components/Institution.astro';
+import Programs from '../components/Programs.astro';
+import Steam from '../components/Steam.astro';
+import Faith from '../components/Faith.astro';
+import Footer from '../components/Footer.astro';
+import Contact from '../components/Contact.astro';
+import '../styles/global.css';
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Anibal Osorio Castaño"
+  description="Educador comprometido del municipio de Hispania, Antioquia. Formación integral con valores, conocimiento y fe para las nuevas generaciones."
+>
+  <Header />
+  <main>
+    <Hero />
+    <Education />
+    <About />
+    <Hispania />
+    <Institution />
+    <Programs />
+    <Steam />
+    <Faith />
+    <Contact />
+  </main>
+  <Footer />
 </Layout>

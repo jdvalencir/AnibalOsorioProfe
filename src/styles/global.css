@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@import 'flowbite/src/themes/default';
+@plugin "flowbite/plugin";
+@source "../../node_modules/flowbite";
+/* Minimal base tweaks only using valid CSS */
+:root {
+  --font-sans:
+    'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-serif:
+    'Sora', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+html,
+body {
+  font-family: var(--font-sans);
+}
+
+/* Optimización de renderizado de imágenes */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Mejora la calidad de las imágenes en displays de alta densidad */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+  }
+}

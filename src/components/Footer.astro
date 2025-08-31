@@ -1,0 +1,167 @@
+---
+import { Twitter, Youtube } from '@lucide/astro';
+---
+
+<footer class="bg-slate-800 text-white relative">
+  <div class="container mx-auto px-4 lg:px-40">
+    <div class="py-20 lg:py-32">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 items-start">
+        <!-- Brand Section -->
+        <div class="lg:col-span-1 max-w-md">
+          <div class="mb-6">
+            <div class="text-2xl font-bold text-indigo-400 font-serif">
+              Prof. Aníbal Osorio
+            </div>
+          </div>
+          <p class="text-slate-300 leading-relaxed mb-6">
+            Educación de calidad para formar ciudadanos íntegros en el municipio
+            de Hispania.
+          </p>
+          <div class="flex gap-3">
+            <a
+              href="https://x.com/anibaloc86"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center w-10 h-10 bg-white/10 rounded-lg text-slate-300 hover:bg-indigo-500 hover:text-white transition-all duration-300 hover:-translate-y-1"
+              aria-label="Twitter"
+            >
+              <Twitter class="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.youtube.com/@anibal2986"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center w-10 h-10 bg-white/10 rounded-lg text-slate-300 hover:bg-indigo-500 hover:text-white transition-all duration-300 hover:-translate-y-1"
+              aria-label="YouTube"
+            >
+              <Youtube class="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Section -->
+        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Servicios -->
+          <div>
+            <h4 class="text-white font-semibold mb-5 text-lg">Servicios</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#educacion"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >Educación Primaria</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#educacion"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >Educación Secundaria</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#programas"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >Formación en Valores</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >Mentoring</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Información -->
+          <div>
+            <h4 class="text-white font-semibold mb-5 text-lg">Información</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#about"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >Sobre el profesor</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#programas"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >Programas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#educacion"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >Metodología</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contacto"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >Inscripciones</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contacto -->
+          <div>
+            <h4 class="text-white font-semibold mb-5 text-lg">Contacto</h4>
+            <ul class="space-y-3">
+              <li class="text-slate-300">Hispania, Antioquia</li>
+              <li class="text-slate-300">Colombia</li>
+              <li>
+                <a
+                  href="mailto:contacto@anibalosorio.edu.co"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >contacto@anibalosorio.edu.co</a
+                >
+              </li>
+              <li>
+                <a
+                  href="tel:+573001234567"
+                  class="text-slate-300 hover:text-indigo-400 transition-colors duration-300"
+                  >+57 300 123 4567</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t border-white/10 py-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-300 text-sm">
+          &copy; 2024 Prof. Aníbal Osorio Castaño. Todos los derechos
+          reservados.
+        </p>
+        <div class="flex flex-wrap gap-6">
+          <a
+            href="#"
+            class="text-slate-300 hover:text-indigo-400 transition-colors duration-300 text-sm"
+            >Política de Privacidad</a
+          >
+          <a
+            href="#"
+            class="text-slate-300 hover:text-indigo-400 transition-colors duration-300 text-sm"
+            >Términos de Uso</a
+          >
+          <a
+            href="#"
+            class="text-slate-300 hover:text-indigo-400 transition-colors duration-300 text-sm"
+            >Código de Ética</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

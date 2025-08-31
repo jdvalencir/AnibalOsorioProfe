@@ -1,0 +1,296 @@
+<nav
+  id="header"
+  class="bg-transparent absolute top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+  >
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <div class="flex flex-col">
+        <span
+          id="header-title"
+          class="self-center text-xl font-bold whitespace-nowrap text-white transition-colors duration-300"
+          >Anibal Osorio Castaño</span
+        >
+        <span
+          id="header-subtitle"
+          class="text-sm text-white/80 transition-colors duration-300"
+          >Educador • Hispania, Antioquia</span
+        >
+      </div>
+    </a>
+    <button
+      data-collapse-toggle="navbar-default"
+      type="button"
+      id="mobile-menu-button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/30 transition-colors duration-300"
+      aria-controls="navbar-default"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Abrir menú principal</span>
+      <svg
+        class="w-5 h-5"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul
+        id="navbar-menu"
+        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-white/20 rounded-lg bg-black/20 md:flex-row md:space-x-6 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent transition-all duration-300"
+      >
+        <li>
+          <a
+            href="#hero-carousel"
+            class="nav-link block py-2 px-3 text-white rounded md:bg-transparent md:p-0 hover:text-blue-300 transition-colors duration-300"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            href="#education"
+            class="nav-link block py-2 px-3 text-white/90 rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 transition-colors duration-300"
+            >Educación</a
+          >
+        </li>
+        <li>
+          <a
+            href="#about"
+            class="nav-link block py-2 px-3 text-white/90 rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 transition-colors duration-300"
+            >Sobre Mí</a
+          >
+        </li>
+        <li>
+          <a
+            href="#hispania"
+            class="nav-link block py-2 px-3 text-white/90 rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 transition-colors duration-300"
+            >Hispania</a
+          >
+        </li>
+        <li>
+          <a
+            href="#programs"
+            class="nav-link block py-2 px-3 text-white/90 rounded hover:bg-white/10 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 transition-colors duration-300"
+            >Programas</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.getElementById('header');
+    const headerTitle = document.getElementById('header-title');
+    const headerSubtitle = document.getElementById('header-subtitle');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const navbarMenu = document.getElementById('navbar-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Mapear enlaces a secciones
+    const sections = [
+      { id: 'hero-carousel', link: 'hero-carousel' },
+      { id: 'education', link: 'education' },
+      { id: 'about', link: 'about' },
+      { id: 'hispania', link: 'hispania' },
+      { id: 'programs', link: 'programs' },
+    ];
+
+    // Función para actualizar la sección activa
+    function updateActiveSection() {
+      const scrollPosition = window.scrollY + 200; // Offset para mejor detección
+
+      let currentSection = null; // No hay sección por defecto
+
+      sections.forEach(section => {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            currentSection = section.link;
+          }
+        }
+      });
+
+      // Si estamos en la parte superior de la página (hero), marcar Inicio
+      if (window.scrollY < 300) {
+        currentSection = 'hero-carousel';
+      }
+
+      // Actualizar estilos de los enlaces
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href').substring(1);
+        const isScrolled = window.scrollY > 100;
+
+        // Remover todas las clases de estado activo
+        link.classList.remove('text-blue-300', 'text-blue-600', 'font-bold');
+
+        // Solo aplicar estilos si hay una sección activa y coincide
+        if (currentSection && href === currentSection) {
+          // Enlace activo
+          if (isScrolled) {
+            link.classList.add('text-blue-600', 'font-bold');
+          } else {
+            link.classList.add('text-blue-300', 'font-bold');
+          }
+        }
+      });
+    }
+
+    // Función para actualizar el header basado en el scroll
+    function updateHeaderOnScroll() {
+      if (window.scrollY > 100) {
+        // Header sticky - fondo blanco elegante
+        header.classList.remove('bg-transparent', 'absolute');
+        header.classList.add(
+          'bg-white/95',
+          'backdrop-blur-md',
+          'shadow-lg',
+          'fixed'
+        );
+
+        // Cambiar colores del texto a oscuro
+        headerTitle.classList.remove('text-white');
+        headerTitle.classList.add('text-gray-900');
+
+        headerSubtitle.classList.remove('text-white/80');
+        headerSubtitle.classList.add('text-gray-600');
+
+        // Cambiar color del botón móvil
+        mobileMenuButton.classList.remove('text-white', 'hover:bg-white/20');
+        mobileMenuButton.classList.add('text-gray-600', 'hover:bg-gray-100');
+
+        // Cambiar colores de los enlaces
+        navLinks.forEach(link => {
+          link.classList.remove(
+            'text-white/90',
+            'text-white',
+            'hover:bg-white/20',
+            'md:hover:text-blue-300',
+            'bg-white/20'
+          );
+          link.classList.add(
+            'text-gray-700',
+            'hover:bg-gray-100',
+            'md:hover:text-blue-600'
+          );
+
+          // El enlace activo también cambia
+          if (link.getAttribute('aria-current') === 'page') {
+            link.classList.add('bg-blue-100', 'text-blue-700');
+          }
+        });
+      } else {
+        // Header transparente - estado inicial
+        header.classList.remove(
+          'bg-white/95',
+          'backdrop-blur-md',
+          'shadow-lg',
+          'fixed'
+        );
+        header.classList.add('bg-transparent', 'absolute');
+
+        // Restaurar colores originales
+        headerTitle.classList.remove('text-gray-900');
+        headerTitle.classList.add('text-white');
+
+        headerSubtitle.classList.remove('text-gray-600');
+        headerSubtitle.classList.add('text-white/80');
+
+        // Restaurar botón móvil
+        mobileMenuButton.classList.remove('text-gray-600', 'hover:bg-gray-100');
+        mobileMenuButton.classList.add('text-white', 'hover:bg-white/20');
+
+        // Restaurar menú móvil
+        navbarMenu.classList.remove(
+          'border-gray-200',
+          'bg-white/95',
+          'shadow-lg'
+        );
+        navbarMenu.classList.add('border-white/20', 'bg-black/20');
+
+        // Restaurar enlaces
+        navLinks.forEach(link => {
+          link.classList.remove(
+            'text-gray-700',
+            'hover:bg-gray-100',
+            'md:hover:text-blue-600',
+            'bg-blue-100',
+            'text-blue-700'
+          );
+          link.classList.add(
+            'text-white/90',
+            'hover:bg-white/20',
+            'md:hover:text-blue-300'
+          );
+
+          // Restaurar enlace activo
+          if (link.getAttribute('aria-current') === 'page') {
+            link.classList.remove('text-white/90');
+            link.classList.add('text-white', 'bg-white/20');
+          }
+        });
+      }
+
+      // Actualizar sección activa después de cambiar colores
+      updateActiveSection();
+    }
+
+    // Escuchar el scroll
+    window.addEventListener('scroll', updateHeaderOnScroll);
+
+    // Ejecutar una vez al cargar para manejar el estado inicial
+    updateHeaderOnScroll();
+
+    // Funcionalidad del menú móvil
+    const toggleButton = document.querySelector(
+      '[data-collapse-toggle="navbar-default"]'
+    );
+    const navbar = document.getElementById('navbar-default');
+
+    if (toggleButton && navbar) {
+      toggleButton.addEventListener('click', () => {
+        navbar.classList.toggle('hidden');
+      });
+    }
+
+    // Smooth scroll para los enlaces de navegación
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const headerHeight = header.offsetHeight;
+          const targetPosition = targetElement.offsetTop - headerHeight - 20;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth',
+          });
+
+          // Cerrar menú móvil si está abierto
+          if (!navbar.classList.contains('hidden')) {
+            navbar.classList.add('hidden');
+          }
+        }
+      });
+    });
+  });
+</script>

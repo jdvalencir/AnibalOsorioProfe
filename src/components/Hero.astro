@@ -1,0 +1,350 @@
+---
+// Importamos el componente Image optimizado de Astro
+import { Image } from 'astro:assets';
+// Iconos reemplazados por SVGs inline para mayor compatibilidad y ligereza.
+---
+
+<div
+  id="hero-carousel"
+  class="relative w-full min-h-screen"
+  data-carousel="slide"
+  data-carousel-autoplay="true"
+  data-carousel-autoplay-interval="5000"
+>
+  <!-- Carousel wrapper -->
+  <div class="relative h-screen overflow-hidden">
+    <!-- Item 1 - Anibal Osorio Profe -->
+    <div class="duration-700 ease-in-out" data-carousel-item="active">
+      <div class="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=85"
+          class="absolute inset-0 w-full h-full object-cover -z-10"
+          alt="Educación y aprendizaje"
+          width={2070}
+          height={1380}
+          format="webp"
+          quality={85}
+        />
+        <!-- Overlay para mejor legibilidad -->
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent -z-10"
+        >
+        </div>
+        <div class="relative z-10 h-full">
+          <div
+            class="mx-auto flex h-full max-w-7xl items-center px-6 md:px-10 lg:px-12"
+          >
+            <div class="text-white max-w-2xl md:max-w-3xl">
+              <p
+                class="mb-3 text-sm md:text-base uppercase tracking-[0.18em] text-white/70"
+              >
+                Profesor • Hispania, Antioquia
+              </p>
+              <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight md:leading-[1.1] [font-family:'Sora',serif]"
+              >
+                Aníbal Osorio Castaño
+              </h1>
+              <p class="mt-4 text-lg md:text-xl text-white/90 max-w-prose">
+                Educador comprometido con la formación integral y el desarrollo
+                humano, con enfoque en valores y excelencia académica.
+              </p>
+              <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="#programas"
+                  class="inline-flex items-center justify-center rounded-full bg-amber-400/95 px-6 py-3 text-base md:text-lg font-medium text-blue-900 hover:bg-amber-300 transition-colors"
+                >
+                  Conoce mi trabajo
+                </a>
+                <a
+                  href="#contacto"
+                  class="inline-flex items-center justify-center rounded-full border border-white/50 px-6 py-3 text-base md:text-lg font-medium text-white hover:bg-white/10 transition-colors"
+                >
+                  Contáctame
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2 - Semillero STEAM -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <div class="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=85"
+          class="absolute inset-0 w-full h-full object-cover -z-10"
+          alt="Semillero STEAM - Ciencia, Tecnología, Ingeniería, Arte y Matemáticas"
+          width={2070}
+          height={1380}
+          format="webp"
+          quality={85}
+        />
+        <!-- Overlay para mejor legibilidad -->
+        <div
+          class="absolute inset-0 bg-gradient-to-l from-indigo-950/80 via-indigo-900/60 to-transparent -z-10"
+        >
+        </div>
+        <div class="relative z-10 h-full">
+          <div
+            class="mx-auto flex h-full max-w-7xl items-center justify-end px-6 md:px-10 lg:px-12"
+          >
+            <div class="text-right text-white max-w-2xl md:max-w-3xl">
+              <p
+                class="mb-3 text-sm md:text-base uppercase tracking-[0.18em] text-white/70"
+              >
+                Innovación educativa
+              </p>
+              <h2
+                class="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight [font-family:'Sora',serif]"
+              >
+                Semillero STEAM
+              </h2>
+              <p class="mt-4 text-lg md:text-xl text-white/90 max-w-prose">
+                Ciencia • Tecnología • Ingeniería • Arte • Matemáticas.
+              </p>
+              <div
+                class="ml-auto mt-6 grid grid-cols-2 gap-4 md:grid-cols-4 max-w-md"
+              >
+                <div
+                  class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-center text-sm"
+                >
+                  Ciencia
+                </div>
+                <div
+                  class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-center text-sm"
+                >
+                  Tecnología
+                </div>
+                <div
+                  class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-center text-sm"
+                >
+                  Ingeniería
+                </div>
+                <div
+                  class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-center text-sm"
+                >
+                  Arte
+                </div>
+                <div
+                  class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-center text-sm"
+                >
+                  Matemáticas
+                </div>
+              </div>
+              <div class="mt-8">
+                <a
+                  href="#steam"
+                  class="inline-flex items-center justify-center rounded-full bg-cyan-500/95 px-6 py-3 text-base md:text-lg font-medium text-white hover:bg-cyan-400 transition-colors"
+                >
+                  Descubre el semillero
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 3 - Hispania, Antioquía -->
+    <div class="duration-700 ease-in-out" data-carousel-item="active">
+      <div class="absolute inset-0">
+        <Image
+          src="/public/hero/hispaniaAntioquia.jpg"
+          class="absolute inset-0 w-full h-full object-cover -z-10"
+          alt="Vista de Hispania, Antioquia"
+          width={2070}
+          height={1380}
+          format="webp"
+          quality={85}
+        />
+        <!-- Overlay para mejor legibilidad -->
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent -z-10"
+        >
+        </div>
+        <div class="relative z-10 h-full">
+          <div
+            class="mx-auto flex h-full max-w-7xl items-center px-6 md:px-10 lg:px-12"
+          >
+            <div class="text-white max-w-2xl md:max-w-3xl">
+              <p
+                class="mb-3 text-sm md:text-base uppercase tracking-[0.18em] text-white/70"
+              >
+                Mi hermoso municipio
+              </p>
+              <h2
+                class="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight md:leading-[1.1] [font-family:'Sora',serif]"
+              >
+                Hispania, Antioquia
+              </h2>
+              <p class="mt-4 text-lg md:text-xl text-white/90 max-w-prose">
+                Un rincón mágico del suroeste antioqueño donde nací y he
+                dedicado mi vida a la educación. Tierra cafetera de gente
+                hospitalaria y tradiciones arraigadas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 4 - I.E Aura María Valencia -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <div class="absolute inset-0">
+        <Image
+          src="/public/hero/auraMariaValencia.jpg"
+          class="absolute inset-0 w-full h-full object-cover -z-10"
+          alt="Institución Educativa Aura María Valencia"
+          width={2070}
+          height={1380}
+          format="webp"
+          quality={85}
+        />
+        <!-- Overlay para mejor legibilidad -->
+        <div
+          class="absolute inset-0 bg-gradient-to-l from-black/75 via-black/40 to-transparent -z-10"
+        >
+        </div>
+        <div class="relative z-10 h-full">
+          <div
+            class="mx-auto flex h-full max-w-7xl items-center justify-end px-6 md:px-10 lg:px-12"
+          >
+            <div class="text-right text-white max-w-2xl md:max-w-3xl">
+              <p
+                class="mb-3 text-sm md:text-base uppercase tracking-[0.18em] text-white/70"
+              >
+                Mi lugar de trabajo
+              </p>
+              <h2
+                class="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight [font-family:'Sora',serif]"
+              >
+                I.E Aura María Valencia
+              </h2>
+              <p class="mt-4 text-lg md:text-xl text-white/90 max-w-prose">
+                Durante más de 15 años he sido parte de esta noble institución,
+                donde he tenido el honor de formar generaciones de jóvenes
+                hispanienses.
+              </p>
+              <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div
+                  class="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm"
+                >
+                  <div
+                    class="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-orange-500"
+                  >
+                    <span class="h-2 w-2 rounded-full bg-white"></span>
+                  </div>
+                  <h3 class="text-lg font-semibold">15+ Años</h3>
+                  <p class="mt-1 text-sm text-white/80">
+                    De experiencia en la institución
+                  </p>
+                </div>
+                <div
+                  class="rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm"
+                >
+                  <div
+                    class="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-green-500"
+                  >
+                    <span class="h-2 w-2 rounded-full bg-white"></span>
+                  </div>
+                  <h3 class="text-lg font-semibold">Formación Integral</h3>
+                  <p class="mt-1 text-sm text-white/80">
+                    Educación con valores y principios
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 6 - Momento con Dios -->
+    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+      <div class="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=85"
+          class="absolute inset-0 w-full h-full object-cover -z-10"
+          alt="Momento con Dios - Espiritualidad y fe"
+          width={2070}
+          height={1380}
+          format="webp"
+          quality={85}
+        />
+        <!-- Overlay para mejor legibilidad -->
+        <div
+          class="absolute inset-0 bg-gradient-to-l from-amber-900/80 via-amber-800/50 to-transparent -z-10"
+        >
+        </div>
+        <div class="relative z-10 h-full">
+          <div
+            class="mx-auto flex h-full max-w-7xl items-center justify-end px-6 md:px-10 lg:px-12"
+          >
+            <div class="text-right text-white max-w-2xl md:max-w-3xl">
+              <p
+                class="mb-3 text-sm md:text-base uppercase tracking-[0.18em] text-white/70"
+              >
+                Espiritualidad y comunidad
+              </p>
+              <h2
+                class="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight [font-family:'Sora',serif]"
+              >
+                Momento con Dios
+              </h2>
+              <p class="mt-4 text-lg md:text-xl text-white/90 max-w-prose">
+                Espacios de reflexión personal y crecimiento espiritual como
+                base de la formación integral.
+              </p>
+              <div class="mt-8">
+                <a
+                  href="#fe"
+                  class="inline-flex items-center justify-center rounded-full bg-amber-500/95 px-6 py-3 text-base md:text-lg font-medium text-white hover:bg-amber-400 transition-colors"
+                >
+                  Conoce más sobre mi fe
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider indicators -->
+  <div
+    class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+  >
+    <button
+      type="button"
+      class="w-2.5 h-2.5 rounded-full bg-white/50 ring-1 ring-white/70 hover:bg-white/80 transition-colors"
+      aria-current="true"
+      aria-label="Slide 1"
+      data-carousel-slide-to="0"></button>
+    <button
+      type="button"
+      class="w-2.5 h-2.5 rounded-full bg-white/40 ring-1 ring-white/60 hover:bg-white/70 transition-colors"
+      aria-current="false"
+      aria-label="Slide 2"
+      data-carousel-slide-to="1"></button>
+    <button
+      type="button"
+      class="w-2.5 h-2.5 rounded-full bg-white/40 ring-1 ring-white/60 hover:bg-white/70 transition-colors"
+      aria-current="false"
+      aria-label="Slide 3"
+      data-carousel-slide-to="2"></button>
+    <button
+      type="button"
+      class="w-2.5 h-2.5 rounded-full bg-white/40 ring-1 ring-white/60 hover:bg-white/70 transition-colors"
+      aria-current="false"
+      aria-label="Slide 4"
+      data-carousel-slide-to="3"></button>
+    <button
+      type="button"
+      class="w-2.5 h-2.5 rounded-full bg-white/40 ring-1 ring-white/60 hover:bg-white/70 transition-colors"
+      aria-current="false"
+      aria-label="Slide 5"
+      data-carousel-slide-to="4"></button>
+  </div>
+</div>

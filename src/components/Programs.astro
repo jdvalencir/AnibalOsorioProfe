@@ -1,0 +1,112 @@
+---
+import { BookOpen, Layers, Users } from '@lucide/astro';
+---
+
+<section id="programs" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 max-w-2xl mx-auto animate-fadeInUp">
+      <p
+        class="text-indigo-600 font-semibold text-sm uppercase tracking-wider mb-2"
+      >
+        Mis experiencias en
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Diferentes Niveles Educativos
+      </h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        A lo largo de mi carrera he tenido la oportunidad de trabajar con
+        estudiantes de diferentes niveles, cada uno con sus propios retos y
+        alegrías.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:-translate-y-2 animate-fadeInUp"
+        style="animation-delay: 0.1s;"
+      >
+        <div
+          class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center"
+        >
+          <div class="text-slate-500">
+            <Layers size={64} />
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Educación Primaria
+          </h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Mi experiencia con los más pequeños ha sido increíble. En primaria
+            disfruto enseñando las bases fundamentales y viendo cómo los niños
+            descubren el mundo del aprendizaje con curiosidad y entusiasmo.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:-translate-y-2 animate-fadeInUp"
+        style="animation-delay: 0.2s;"
+      >
+        <div
+          class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center"
+        >
+          <div class="text-slate-500">
+            <BookOpen size={64} />
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Educación Secundaria
+          </h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            En bachillerato he tenido la oportunidad de acompañar a los jóvenes
+            en una etapa crucial de su desarrollo. Me enfoco en ayudarles a
+            desarrollar pensamiento crítico y a prepararse para su futuro
+            universitario.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:-translate-y-2 animate-fadeInUp"
+        style="animation-delay: 0.3s;"
+      >
+        <div
+          class="h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center"
+        >
+          <div class="text-slate-500">
+            <Users size={64} />
+          </div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Formación en Valores
+          </h3>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Una parte fundamental de mi enseñanza es la formación en valores.
+            Creo firmemente que la educación debe ir más allá de lo académico,
+            incluyendo el desarrollo del carácter y la ética cristiana.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+    }
+  </style>
+</section>

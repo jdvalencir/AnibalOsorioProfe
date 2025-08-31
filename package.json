@@ -1,14 +1,35 @@
 {
-  "name": "",
+  "name": "anibal-osorio-profe",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx,.astro --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
-    "astro": "^5.13.3"
+    "@lucide/astro": "^0.542.0",
+    "@tailwindcss/vite": "^4.1.12",
+    "astro": "^5.13.5",
+    "flowbite": "^3.1.2",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@types/eslint__js": "^8.42.3",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-parser-plain": "^0.1.1",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "typescript-eslint": "^8.41.0"
   }
 }
